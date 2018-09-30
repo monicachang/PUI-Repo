@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+#home-body {
     background-image: url("images/dog2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -13,7 +16,7 @@ header {
     padding: 15px 25px;
 }
 
-header .main {
+#main-header {
     background-color: #E0EFF6;
 }
 
@@ -29,7 +32,8 @@ header .main {
     text-decoration: none;
     padding: 0;
     text-align: left;
-    color: rgb(213,128,48);
+    /*color: rgb(213,128,48);*/
+    color: black;
 }
 
 h1 {
@@ -56,7 +60,7 @@ li a {
     display: block;
     color: black;
     text-align: center;
-    padding: 20px 25px;
+    padding: 25px 25px 20px 25px;
     text-decoration: none;
 }
 
@@ -112,6 +116,14 @@ footer {
     margin: auto;
 }
 
+.header-search {
+    position: relative;
+    top: -70px;
+    width: 30%;
+    left: 20%;
+    /*margin: auto;*/
+}
+
 #search-button {
     position: absolute;
     float: left;
@@ -160,4 +172,124 @@ footer {
     text-decoration: none;
 }
 
+/*********** DOGS BROWSING PAGE SIDEBAR ************/
 
+h2 {
+    margin: 0px;
+}
+
+#dogs-sidebar {
+    position: relative;
+    padding: 0px;
+    margin: 0px 50px;
+    width: 15%;
+    display: inline-block;
+    float: left;
+}
+
+.active-sidebar-category {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.filter-block {
+    margin: 0px;
+}
+
+.filter-label {
+    display: inline-block;
+    margin: 0px;
+}
+
+.plus-expansion {
+    display: inline-block;
+    float: right;
+    margin: 0px;
+}
+
+/*********** MAIN BROWSING CONTENT ************/
+
+.nav-info {
+    position: relative;
+    width: 70%;
+    display: inline-block;
+    float: left;
+    margin: 6px 20px 6px 20px;
+}
+
+
+.nav-label {
+    display: inline-block;
+    margin: 0px;
+    font-size: 13px;
+}
+
+.sorting {
+    display: inline-block;
+    float: right;
+    margin: 0px;
+    font-size: 13px;
+}
+
+.results {
+    color: rgba(0,0,0,0.3);
+}
+
+.item-row {
+    width: 100%;
+}
+
+.item-picture {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    float: left;
+    margin: 40px 25px;
+    z-index: 6;
+}
+
+.item-picture img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    object-fit: cover;
+}
+
+.item-name {
+    font-size: 13px;
+    margin: 0px;
+    padding: 5px 0px;
+    display: inline-block;
+    float: left;
+}
+
+.item-price {
+    font-size: 13px;
+    margin: 0px;
+    padding: 5px 0px;
+    display: inline-block;
+    float: right;
+}
+
+.item-source {
+    position: relative;
+    font-size: 8px;
+    width: 100%;
+    color: white;
+    margin: -35px 0px;
+    padding: 5px 7px 5px 7px;
+    display: inline-block;
+    float: left;
+    z-index: 5;
+}

@@ -3,7 +3,7 @@
 <head>
     <title>Dogs</title>
     <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Doppio+One" rel="stylesheet">
@@ -11,11 +11,11 @@
 
 <body>
     <div id="container">
-        <header>
+        <header id="main-header">
             <ul>
-                <li><a class="active" href="main/signin.html">Sign In</a></li>
-                <li><a href="main/cart.html">Cart</a></li>
-                <li><a href="main/shop.html">Shop</a></li>
+                <li><a class="active" href="index.html">Sign In</a></li>
+                <li><a href="index.html">Cart</a></li>
+                <li><a href="index.html">Shop&nbsp;&nbsp;&#9660;</a></li>
                 <li id="logo"><a href="index.html">
                     <h1>Muddy Paws</h1>
                     <h3>Adventure Gear</h3>
@@ -23,11 +23,70 @@
             </ul>
         </header>
 
-        <div id="todo-lists">
+        <div id="content">
+
+            <form id="search-form">
+                <div class="header-search">
+                  <input id="search-box" type="text" name="q" class="round" placeholder="Search All Gear" />
+                  <button id="search-button">GO</button>
+                </div>
+            </form>
+
+            <!-- sidebar -->
+            <div id="dogs-sidebar">
+                <h2>Dogs</h2>
+                <hr>
+                <p class="active-sidebar-category">All</p>
+                <p>Apparel</p>
+                <p>Packs</p>
+                <p>Collars</p>
+                <p>Boots</p>
+                <p>Toys</p>
+                <p>Treats</p>
+                <p>Sale</p>
+                <hr>
+                <div class="filter-block"><p class="filter-label">COLOR</p><p class="plus-expansion">+</p></div>
+                <hr>
+                <div class="filter-block"><p class="filter-label">SIZE</p><p class="plus-expansion">+</p></div>
+                <hr>
+                <div class="filter-block"><p class="filter-label">BRAND</p><p class="plus-expansion">+</p></div>
+                <hr>
+            </div>
+
+            <!-- heading for results -->
+            <div class="nav-info results">
+                <p class="sorting">135 Results</p>
+            </div><br>
+            <div class="nav-info">
+                <div class="filter-block"><p class="nav-label">Shop&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<b>Dogs</b></p><p class="sorting">Featured&nbsp;&nbsp;&#9660;</p></div>
+            </div>
+
+            <div class="item-row">
+                <div class="item-picture"><img src="../images/cameron_collar.jpg" alt="Cameron Collar"><p class="item-source">https://figopetinsurance.com/sites/default/files/styles/blog_detail/public/imagedogspitbull-and-man-hiking-mountainsblog.jpg?itok=O9mxsOdT</p>
+                    <div><p class="item-name">Cameron Collar</p><p class="item-price">$26</p></div></div>
+                <div class="item-picture"><img src="../images/water_chew.jpg" alt="Water Chew"><p class="item-source">https://www.fetcherbay.com/product_images/uploaded_images/boz-water-dog-toy-baxter.jpg</p>
+                    <div><p class="item-name">Manny Raincoat</p><p class="item-price">$7</p></div></div>
+                <div class="item-picture"><img src="../images/manny_raincoat.jpg" alt="Manny Raincoat"><p class="item-source">https://hikingwithxena.files.wordpress.com/2017/03/wp-1490462815033.jpg?w=1084</p>
+                    <div><p class="item-name">Manny Raincoat</p><p class="item-price">$34</p></div></div>
+            </div>
+
+
+            <div class="item-row">
+                <div class="item-picture"><img src="../images/renny_rope.jpg" alt="Renny Rope"><p class="item-source">https://www.petplay.com/media/catalog/product/cache/1/image/560x386/9df78eab33525d08d6e5fb8d27136e95/_/p/_plb1471.jpg</p>
+                    <div><p class="item-name">Renny Rope</p><p class="item-price">$8</p></div></div>
+                <div class="item-picture"><img src="../images/sherpa_vest.jpg" alt="Sherpa Vest"><p class="item-source">https://dogsthathike.com/wp-content/uploads/2017/06/KurgoDogCoreCoolingVest-4-e1498078078181.jpg</p>
+                    <div><p class="item-name">Sherpa Vest</p><p class="item-price">$34</p></div></div>
+                <div class="item-picture"><img src="../images/hikers_fanny.jpg" alt="Hiker's Fanny"><p class="item-source">https://s3.amazonaws.com/backpackersverse/wp-content/uploads/2016/12/15212859/Interested-In-Hiking-The-Appalachian-Trail-With-A-Dog.jpg</p>
+                    <div><p class="item-name">Hiker's Fanny</p><p class="item-price">$28</p></div></div>
+            </div>
+
 
         </div>
+        <!-- end of content -->
 
-        </div>
+        <footer>
+        </footer>
+
     </div>
 </body>
 
