@@ -14,7 +14,7 @@
 // });
 
 $(document).ready(function(){
-    
+
     $(document).on("click", ".delete-item", function() {
         $(this).parent().remove();
     });
@@ -38,6 +38,21 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on("click", ".edit-item", function() {
+
+        $(this).hide();
+        $(this).next().show();
+        $(this).next().next().show();
+
+    });
+
+    $(document).on("click", ".done-changing-item", function() {
+
+        var itemName = $(this).prev().prev().prev();
+        var input = $(this).prev().val();
+        itemName.text(input);
+
+    });
 });
 
 

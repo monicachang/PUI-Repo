@@ -76,3 +76,12 @@ input {
 .doneButton {
     margin: 5px;
 }
+
+.edit-input-box {
+    display: none;
+}
+
+.done-changing-item {
+    margin: 10px;
+    display: none;
+}
