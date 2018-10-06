@@ -293,3 +293,120 @@ hr {
     float: left;
     z-index: 5;
 }
+
+
+/*********** DETAILS PAGE CONTENT ************/
+
+.details-content {
+    margin: auto;
+    width: 80%;
+}
+
+.details-all-images {
+    width: 40%;
+    padding: 0px 20px;
+    float: left;
+}
+
+.enlarged-image {
+    width: 100%;
+}
+
+.enlarged-image img {
+    width: 100%;
+}
+
+.thumbnail-container {
+    width: 75px;
+    height: 50px;
+    float: left;
+    padding: 10px 10px 10px 0px;
+}
+
+.thumbnail-container > img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clear: both;
+}
+
+.inactive-thumbnail {
+    opacity: 0.5;
+}
+
+/*text related details
+*/
+
+.text-details-block {
+    width: 40%;
+    padding: 0px 20px;
+    float: left;
+}
+
+.item-title {
+    font-family: 'Doppio One', sans-serif;
+}
+
+.inactive-star {
+    opacity: 0.5;
+}
+
+.customization-block {
+    padding: 5px 0px;
+}
+
+.customization-number {
+    display: inline-block;
+
+}
+
+.customization-title {
+    display: inline-block;
+    width: 60%;
+    margin: 0px 15px 0px 15px;
+    vertical-align: center;
+}
+
+.colors {
+    margin: 0px 40px;
+}
+
+.not-sure {
+    color: black;
+}
+
+.sizes {
+    margin: 0px 40px;
+}
+
+.delivery {
+    margin: 0px 40px;
+}
+
+.quantity {
+    margin: 20px 0px;
+}
+
+#add-to-cart {
+    font-size: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 1px rgb(255,255,255) solid;
+
+}
+
+#quantity-input {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.details-bullet {
+    list-style: circle;
+    width: 90%;
+}
+
+.description {
+    font-size: 12px;
+}
