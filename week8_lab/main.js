@@ -20,7 +20,7 @@ function random(length)
 $(document).ready(()=>{
     console.log("ready")
 
-    var animal = new Animal(picts[2], names[2], ages[2])
+    var animal = new Animal(picts[random(3)], names[random(4)], ages[random(5)])
     console.log(animal)
     $("#animal-img").attr("src", animal.pic);
     $("#animal-name").html(animal.name);
