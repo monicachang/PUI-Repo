@@ -373,14 +373,13 @@ hr {
 
 .customization-number {
     display: inline-block;
-
 }
 
 .customization-title {
     display: inline-block;
     width: 60%;
     margin: 0px 15px 0px 15px;
-    vertical-align: center;
+/*    vertical-align: center;*/
 }
 
 .colors {
@@ -404,7 +403,7 @@ hr {
 }
 
 #add-to-cart {
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px;
     background-color: black;
     color: white;
@@ -414,7 +413,7 @@ hr {
 }
 
 #quantity-input {
-    font-size: 20px;
+    font-size: 16px;
     padding: 10px;
 }
 
@@ -425,4 +424,44 @@ hr {
 
 .description {
     font-size: 12px;
+}
+
+/*selecting customization for an item*/
+
+.color-dot {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.color1 {
+    background-color: #E68645;
+}
+
+.color2 {
+    background-color: #7AB0D2;
+}
+
+.color3 {
+    background-color: #4A6051;
+}
+
+.active-color {
+    border: 2px solid black;
+}
+
+.size-dot {
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 5px;
+    text-align: center;
+}
+
+.active-size {
+    border: 2px solid black;
 }
