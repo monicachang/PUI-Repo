@@ -7,6 +7,9 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Doppio+One" rel="stylesheet">
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../main.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -39,8 +42,8 @@
                 </div>
                 <!-- images -->
                 <div class="details-all-images">
-                    <div class="enlarged-image"><img src="../images/fanny1.jpg" alt="Hiker's Fanny"><p class="details-page-item-source">https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/DogHikingGear1.jpg</p></div>
-                    <div class="thumbnails"><div class="thumbnail-container"><img src="../images/fanny1.jpg" alt="Hiker's Fanny"></div><div class="thumbnail-container"><img class="inactive-thumbnail" src="../images/fanny2.jpg" alt="Hiker's Fanny"></div><div class="thumbnail-container"><img class="inactive-thumbnail" src="../images/fanny3.jpg" alt="Hiker's Fanny"></div></div>
+                    <div class="enlarged-image"><img id="big-image" src="../images/fanny1.jpg" alt="Hiker's Fanny"><p class="details-page-item-source">https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/DogHikingGear1.jpg</p></div>
+                    <div class="thumbnails"><div class="thumbnail-container"><img id="thumbnail1" class="active-thumbnail" src="../images/fanny1.jpg" alt="Hiker's Fanny"></div><div class="thumbnail-container"><img id="thumbnail2" class="inactive-thumbnail" src="../images/fanny2.jpg" alt="Hiker's Fanny"></div><div class="thumbnail-container"><img id="thumbnail3" class="inactive-thumbnail" src="../images/fanny3.jpg" alt="Hiker's Fanny"></div></div>
                     <!-- IMAGE SOURCES -->
                     <!-- https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/DogHikingGear1.jpg
                     https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/BestDogHikingPacks3.jpg
@@ -61,7 +64,7 @@
 
                     <div class="customization-block">
                         <img class="customization-number" src="../images/two.png" alt=""><div class="customization-title"><p>Size <a class="not-sure" href="#">(Not Sure?)</a>:</p></div>
-                        <div class="sizes"><span class="size-dot inactive-size">S</span><span class="size-dot active-size">M</span><span class="size-dot inactive-size">L</span></div>
+                        <div class="sizes"><span class="size-dot small inactive-size">S</span><span class="size-dot medium active-size">M</span><span class="size-dot large inactive-size">L</span></div>
                     </div>
 
                     <div class="customization-block">
@@ -73,8 +76,9 @@
 
                     <div class="quantity">
                         <form>
-                          <input id="quantity-input" type="number" name="quantity" min="1" max="5" placeholder="1">
-                          <input id="add-to-cart" type="submit" value="ADD TO CART">
+                          <input id="quantity-input" type="number" name="quantity" value="1" min="1" max="5" placeholder="1">
+                          <div id="add-to-cart">ADD TO CART</div>
+                          <!-- <input id="add-to-cart" type="submit" value="ADD TO CART"> -->
                         </form>
                     </div>
 
