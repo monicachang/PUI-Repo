@@ -466,3 +466,51 @@ hr {
 .active-size {
     border: 2px solid black;
 }
+
+
+/*the modal*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal*/
+.modal {
+/*    display: none;*/
+    position: fixed; /* Keep in place */
+    z-index: 1; /* Stau on top */
+    margin-top: 75px;
+    margin-right: 145px;
+    right: 0;
+    top: 0;
+    width: 30%; /* Full width */
+    height: 40%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #979797;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.number-in-cart-block {
+    position: fixed; /* Keep in place */
+    right: 0;
+    top: 0;
+    z-index: 0;
+    padding-top: 30px;
+    padding-right: 128px;
+}
+
+.number-in-cart-dot {
+    height: 20px;
+    width: 20px;
+    font-size: 13px;
+    background-color: #C74C2B;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 6px;
+    padding: 4px;
+    text-align: center;
+}
