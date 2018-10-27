@@ -26,6 +26,8 @@ class cartItem{
 var cart = new Array();
 // localStorage.storedCartItems = "";
 
+var allAttributes = new Array();
+
 var picts = ["fanny1.jpg", "fannyBlue1.jpg", "fannyGreen1.jpg"]
 var sources = ["https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/DogHikingGear1.jpg",
                "https://s3.amazonaws.com/backpackersverse/wp-content/uploads/2016/12/15212859/Interested-In-Hiking-The-Appalachian-Trail-With-A-Dog.jpg",
@@ -147,6 +149,15 @@ $(document).ready(()=>{
         // console.log(newCartItem.itemColor);
         cart.push(newCartItem);
 
+        allAttributes.push(sessionStorage.itemColor);
+        allAttributes.push(sessionStorage.itemSize);
+        allAttributes.push(sessionStorage.itemImage);
+        allAttributes.push(sessionStorage.shipToMe);
+        allAttributes.push(sessionStorage.pickUpInStore);
+        allAttributes.push(sessionStorage.itemQuantity);
+
+        console.log(allAttributes);
+
 
         // add item to cart popup
 
@@ -158,6 +169,8 @@ $(document).ready(()=>{
         sessionStorage.setItem("cartItems", JSON.stringify(cart));
         // localStorage.storedCartItems = JSON.parse(sessionStorage.getItem("cartItems"));
         // console.log('HREE');
+
+        sessionStorage.setItem("allAttributes", JSON.stringify(allAttributes));
         // console.log(storedCartItems[0]);
         sessionStorage.setItem("numberInCart", JSON.stringify(sessionStorage.numInCart));
         var storedNumberInCart = JSON.parse(sessionStorage.getItem("numberInCart"));
@@ -204,72 +217,134 @@ function displayCart() {
 
     // sessionStorage.setItem("cartItems", JSON.stringify(cart));
     // var storedCartItems = JSON.parse(sessionStorage.getItem("cartItems"));
-    console.log(sessionStorage.getItem("cartItems"));
-    var items = sessionStorage.getItem("cartItems");
-    // console.log(items.get(0));
 
-    // sessionStorage.getItem("cartItems").forEach(function (arrayItem) {
-    for (var arrayItem in sessionStorage.getItem("cartItems")) {
+    // console.log(JSON.parse(sessionStorage.getItem("cartItems")));
+    // var items = JSON.parse(sessionStorage.getItem("cartItems"));
+    console.log(JSON.parse(sessionStorage.getItem("allAttributes")));
+    var items = JSON.parse(sessionStorage.getItem("allAttributes"));
+    console.log(items[0]);
+    // sessionStorage.getItem("cartItems").each(displayItem);
+    // for (var arrayItem in sessionStorage.getItem("cartItems"))
 
-        // var i;
-        // for (i = 0; i < sessionStorage.getItem("cartItems").length; ++i) {
+    // for (var arrayItem in sessionStorage.getItem("cartItems")) {
+    // var i;
+    // for (i = 0; i < items.length; i++) {
+    //     console.log(items.length);
 
-        var itemCard = document.createElement('div');
-        itemCard.className =  "item-card";
-        $(".all-items").append(itemCard);
-        var close = document.createElement('span');
-        close.className = "close";
-        close.innerHTML = "x";
-        $(".item-card").append(close);
-        var cardImageBlock = document.createElement('div');
-        cardImageBlock.className = "card-image-block";
-        $(".item-card").append(cardImageBlock);
-        var cardImage = document.createElement('img');
-        cardImage.src = "../images/fanny1.jpg";
-        $(".card-image-block").append(cardImage);
+    var itemCard = document.createElement('div');
+    itemCard.className =  "item-card";
+    $(".all-items").append(itemCard);
+    var close = document.createElement('span');
+    close.className = "close";
+    close.innerHTML = "x";
+    $(".item-card").append(close);
+    var cardImageBlock = document.createElement('div');
+    cardImageBlock.className = "card-image-block";
+    $(".item-card").append(cardImageBlock);
+    var cardImage = document.createElement('img');
+    cardImage.src = "../images/fanny1.jpg";
+    $(".card-image-block").append(cardImage);
 
-        var allCardItemText = document.createElement('div');
-        allCardItemText.className = "all-card-item-text";
-        $(".item-card").append(allCardItemText);
+    var allCardItemText = document.createElement('div');
+    allCardItemText.className = "all-card-item-text";
+    $(".item-card").append(allCardItemText);
 
-        var cardItemTextBlock1 = document.createElement('div');
-        cardItemTextBlock1.className = "card-item-text-block1";
-        $(".all-card-item-text").append(cardItemTextBlock1);
+    var cardItemTextBlock1 = document.createElement('div');
+    cardItemTextBlock1.className = "card-item-text-block1";
+    $(".all-card-item-text").append(cardItemTextBlock1);
 
-        var title = document.createElement('p');
-        title.className = "card-item-title";
-        title.innerHTML = "Forest Fanny";
-        $(".card-item-text-block1").append(title);
-        var size = document.createElement('p');
-        size.className = "card-item-size";
-        size.innerHTML = "Size: ";
-        $(".card-item-text-block1").append(size);
-        // size.innerHTML += arrayItem.itemsize;
-        var color = document.createElement('p');
-        color.className = "card-item-color";
-        color.innerHTML = "Color: ";
-        $(".card-item-text-block1").append(color);
+    var title = document.createElement('p');
+    title.className = "card-item-title";
+    title.innerHTML = "Forest Fanny";
+    $(".card-item-text-block1").append(title);
+    var size = document.createElement('p');
+    size.className = "card-item-size";
+    size.innerHTML = "Size: M";
+    $(".card-item-text-block1").append(size);
+    // size.innerHTML += arrayItem.itemsize;
+    var color = document.createElement('p');
+    color.className = "card-item-color";
+    color.innerHTML = "Color: ";
+    $(".card-item-text-block1").append(color);
 
-        color.innerHTML += "hae;flkajw;elkfajwl;";
+    color.innerHTML += "Blue";
 
-        var cardItemTextBlock2 = document.createElement('div');
-        cardItemTextBlock2.className = "card-item-text-block2";
-        $(".all-card-item-text").append(cardItemTextBlock2);
+    var cardItemTextBlock2 = document.createElement('div');
+    cardItemTextBlock2.className = "card-item-text-block2";
+    $(".all-card-item-text").append(cardItemTextBlock2);
 
-        var quantity = document.createElement('p');
-        quantity.className = "card-item-quantity";
-        quantity.innerHTML = "Qty: ";
-        $(".card-item-text-block2").append(quantity);
+    var quantity = document.createElement('p');
+    quantity.className = "card-item-quantity";
+    quantity.innerHTML = "Qty: 1";
+    $(".card-item-text-block2").append(quantity);
 
-        var cardItemTextBlock3 = document.createElement('div');
-        cardItemTextBlock3.className = "card-item-text-block3";
-        $(".all-card-item-text").append(cardItemTextBlock3);
+    var cardItemTextBlock3 = document.createElement('div');
+    cardItemTextBlock3.className = "card-item-text-block3";
+    $(".all-card-item-text").append(cardItemTextBlock3);
 
-        var price = document.createElement('p');
-        price.className = "card-item-price";
-        price.innerHTML = "Price: ";
-        $(".card-item-text-block3").append(price);
-    }
+    var price = document.createElement('p');
+    price.className = "card-item-price";
+    price.innerHTML = "$26.00 ";
+    $(".card-item-text-block3").append(price);
+    // }
 }
+
+// function displayItem() {
+//     var itemCard = document.createElement('div');
+//     itemCard.className =  "item-card";
+//     $(".all-items").append(itemCard);
+//     var close = document.createElement('span');
+//     close.className = "close";
+//     close.innerHTML = "x";
+//     $(".item-card").append(close);
+//     var cardImageBlock = document.createElement('div');
+//     cardImageBlock.className = "card-image-block";
+//     $(".item-card").append(cardImageBlock);
+//     var cardImage = document.createElement('img');
+//     cardImage.src = "../images/fanny1.jpg";
+//     $(".card-image-block").append(cardImage);
+
+//     var allCardItemText = document.createElement('div');
+//     allCardItemText.className = "all-card-item-text";
+//     $(".item-card").append(allCardItemText);
+
+//     var cardItemTextBlock1 = document.createElement('div');
+//     cardItemTextBlock1.className = "card-item-text-block1";
+//     $(".all-card-item-text").append(cardItemTextBlock1);
+
+//     var title = document.createElement('p');
+//     title.className = "card-item-title";
+//     title.innerHTML = "Forest Fanny";
+//     $(".card-item-text-block1").append(title);
+//     var size = document.createElement('p');
+//     size.className = "card-item-size";
+//     size.innerHTML = "Size: ";
+//     $(".card-item-text-block1").append(size);
+//     // size.innerHTML += arrayItem.itemsize;
+//     var color = document.createElement('p');
+//     color.className = "card-item-color";
+//     color.innerHTML = "Color: ";
+//     $(".card-item-text-block1").append(color);
+
+//     color.innerHTML += "hae;flkajw;elkfajwl;";
+
+//     var cardItemTextBlock2 = document.createElement('div');
+//     cardItemTextBlock2.className = "card-item-text-block2";
+//     $(".all-card-item-text").append(cardItemTextBlock2);
+
+//     var quantity = document.createElement('p');
+//     quantity.className = "card-item-quantity";
+//     quantity.innerHTML = "Qty: ";
+//     $(".card-item-text-block2").append(quantity);
+
+//     var cardItemTextBlock3 = document.createElement('div');
+//     cardItemTextBlock3.className = "card-item-text-block3";
+//     $(".all-card-item-text").append(cardItemTextBlock3);
+
+//     var price = document.createElement('p');
+//     price.className = "card-item-price";
+//     price.innerHTML = "Price: ";
+//     $(".card-item-text-block3").append(price);
+// }
 
 

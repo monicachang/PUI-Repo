@@ -555,7 +555,6 @@ hr {
     padding: 0px 20px;
     margin: 0px 20px;
     float: left;
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
 }
@@ -605,9 +604,10 @@ hr {
     padding: 0px 20px;
 /*    margin: 0px 20px;*/
     float: left;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4);
+/*    background-color: rgb(0,0,0);*/
+/*    background-color: rgba(0,0,0,0.4);*/
     border-radius: 5px;
+    border: black 1px solid;
 }
 
 .all-card-item-text {
