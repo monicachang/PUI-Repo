@@ -1,0 +1,13 @@
+// var itemCard = $("<div>");
+// itemCard.addClass("item-card");
+// $(".all-items").append(itemCard);
+// console.log(itemCard);
+// var close = $("<span>");
+// close.addClass("close");
+// $(".item-card").append(close);
+// var cardImageBlock = $("<div>");
+// cardImageBlock.addClass("card-image-block");
+// $(".item-card").append(cardImageBlock);
+// var cardImage = $("<img>");
+// cardImage.attr("src", "../images/fanny1.jpg");
+// $(".card-imge-block").append(cardImage);
