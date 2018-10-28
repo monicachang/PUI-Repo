@@ -500,7 +500,7 @@ hr {
     z-index: 0;
     padding-top: 23px;
     padding-right: 128px;
-    display: none;
+/*    display: none;*/
 }
 
 .number-in-cart-block-cart-page {
@@ -555,7 +555,7 @@ hr {
     padding: 0px 20px;
     margin: 0px 20px;
     float: left;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.1);
     border-radius: 5px;
 }
 
@@ -566,8 +566,8 @@ hr {
     padding: 20px;
     background-color: white;
     margin: 5% auto;
-    border: 1px solid #888;
-}
+/*    border: 1px solid #888;
+*/}
 
 /* The Close Button */
 .close {
@@ -585,9 +585,10 @@ hr {
 }
 
 .card-image-block {
-    width: 100px;
+    width: 80px;
     height: 75px;
     left: 0;
+    margin: 0px 20px;
     display: inline-block;
 }
 
@@ -615,28 +616,28 @@ hr {
     top: 0px;
 }
 
-.card-item-text-block1, .card-item-text-block2, .card-item-text-block3 {
+.card-item-text-blockA, .card-item-text-blockB, .card-item-text-blockC {
     display: inline-block;
-    padding: 0px 20px;
+    margin: 0px 0px 0px 40px;
     vertical-align: top;
 }
 
-.card-item-text-block1 p {
+.card-item-text-blockA p {
     margin: 0px;
 }
 
-.card-item-text-block2 p {
+.card-item-text-blockB p {
     margin: 0px;
 }
 
-.card-item-text-block3 p {
+.card-item-text-blockC p {
     margin: 0px;
 }
 
 .card-item-title {
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .card-item-price {
-    font-weight: bold;
+    font-weight: 900;
 }
