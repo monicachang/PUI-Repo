@@ -171,23 +171,9 @@ $( document ).ready(function() {
 
 function displayCart() {
 
-    console.log("helloooooo");
-
-    // sessionStorage.setItem("cartItems", JSON.stringify(cart));
-    // var storedCartItems = JSON.parse(sessionStorage.getItem("cartItems"));
-
-    // console.log(JSON.parse(sessionStorage.getItem("cartItems")));
-    // var items = JSON.parse(sessionStorage.getItem("cartItems"));
-
-    // console.log(JSON.parse(sessionStorage.getItem("allAttributes")));
-    // var items = JSON.parse(sessionStorage.getItem("allAttributes"));
-
-    // console.log("YOOOOOO" + items.length);
-    // console.log("hi" + Number(sessionStorage.getItem("cartItems")));
-    // sessionStorage.getItem("cartItems").each(displayItem);
-    // for (var arrayItem in sessionStorage.getItem("cartItems"))
     var items = JSON.parse(sessionStorage.getItem("cartItems"));
     console.log("itemcount" + sessionStorage.getItem("itemCount"));
+    var totalPrice = 0;
 
     // keep the cart number displayed at the top
     var storedNumberInCart = JSON.parse(sessionStorage.getItem("numberInCart"));
@@ -199,11 +185,10 @@ function displayCart() {
 
     // Object.keys(items).forEach(function (key) {
     //   console.log(key + "'s favorite fruit is " + favoriteFruit[key]['itemSize']);
-    
+
+    // create a card
     var i;
     for (i = 0; i < items.length; i++) {
-        console.log(i);
-
         var itemCard = document.createElement('div');
         itemCard.className =  "item-card";
         itemCard.id = "item-card"+i;
@@ -249,12 +234,21 @@ function displayCart() {
         size.id = "card-item-size"+i;
         size.innerHTML = "Size: "+items[i].itemSize;
         $("#card-item-text-blockA"+i).append(size);
-        // size.innerHTML += arrayItem.itemsize;
         var color = document.createElement('p');
         color.className = "card-item-color";
         color.id = "card-item-color"+i;
         color.innerHTML = "Color: "+items[i].itemColor;
         $("#card-item-text-blockA"+i).append(color);
+        var delivery = document.createElement('p');
+        delivery.className = "card-item-delivery";
+        delivery.id = "card-item-delivery"+i;
+        if (items[i].shipToMe==0) {
+            delivery.innerHTML = "Pick up In Store";
+        }
+        else {
+            delivery.innerHTML = "Ship to Me";
+        }
+        $("#card-item-text-blockA"+i).append(delivery);
 
         var cardItemTextBlockB = document.createElement('div');
         cardItemTextBlockB.className = "card-item-text-blockB";
@@ -277,7 +271,14 @@ function displayCart() {
         price.id = "card-item-price"+i;
         price.innerHTML = "$" + items[i].itemPrice + " x " + items[i].itemQuantity;
         $("#card-item-text-blockC"+i).append(price);
+
+        // add to total price
+        totalPrice = Number(totalPrice) + Number(items[i].itemPrice) * Number(items[i].itemQuantity);
     }
+
+    // update cart summary
+    $(".cart-summary-item-number").text(storedNumberInCart);
+    $(".total-cost").text(totalPrice);
 }
 
 function showCartNumber() {
