@@ -38,7 +38,7 @@
             <div class="cart-content">
                 <!-- heading -->
                 <div class="shopping-heading-info">
-                    <p>< Continue Shopping</p>
+                    <a id="continue-shopping-link" href="#"><p>< Continue Shopping</p></a>
                     <h3 class="shopping-cart-title"><b>Shopping Cart</b></h3>
                 </div>
                 
@@ -76,10 +76,10 @@
                 <!-- cart summary block -->
                 <div class="cart-summary-block">
                     <p><span class="cart-summary-item-number">0</span> item(s)</p>
-                    <p>Subtotal: $26.00</p>
+                    <p>Subtotal: $<span class="subtotal-cost">26</span>.00</p>
                     <p>Shipping: $0.00</p>
                     <p>Tax: $0.00</p>
-                    <p>------------------------</p>
+                    <div id="cart-summary-line"></div>
                     <p><b>Total: $<span class="total-cost">0</span>.00</b></p>
                 </div>
                 

@@ -274,10 +274,12 @@ function displayCart() {
 
         // add to total price
         totalPrice = Number(totalPrice) + Number(items[i].itemPrice) * Number(items[i].itemQuantity);
+        sessionStorage.setItem("totalPrice", JSON.stringify(totalPrice));
     }
 
     // update cart summary
     $(".cart-summary-item-number").text(storedNumberInCart);
+    $(".subtotal-cost").text(totalPrice);
     $(".total-cost").text(totalPrice);
 }
 
@@ -286,6 +288,35 @@ function showCartNumber() {
         $(".number-in-cart-dot").text(JSON.parse(sessionStorage.getItem("numberInCart")));
     }
 }
+
+// delete card if x is pressed
+$(document).on("click", ".close", function() {
+    $(this).parent().remove();
+    var num = $(this).attr("id").slice(-1);
+    console.log(num);
+    var cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
+    
+    
+    // reset the number in cart
+    var lastCartNum = JSON.parse(sessionStorage.getItem("numberInCart")); 
+    var newCartNum = Number(lastCartNum) - Number(cartItems[num].itemQuantity);  
+    console.log(newCartNum);
+    sessionStorage.setItem("numberInCart", JSON.stringify(newCartNum));
+    console.log(JSON.parse(sessionStorage.getItem("numberInCart")));
+    $(".number-in-cart-dot").text(newCartNum);
+    $(".cart-summary-item-number").text(newCartNum);
+
+    // change total and subtotal and total num of items
+    var total = Number(JSON.parse(sessionStorage.getItem("totalPrice"))) - Number(cartItems[num].itemPrice)*Number(cartItems[num].itemQuantity);
+    sessionStorage.setItem("totalPrice", JSON.stringify(total));
+    $(".total-cost").text(total);
+    $(".subtotal-cost").text(total);
+
+    // remove from stored array
+    cartItems.splice(num, 1);
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+    console.log(JSON.parse(sessionStorage.getItem("cartItems")));
+});
 
 
 

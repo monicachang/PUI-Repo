@@ -544,6 +544,11 @@ hr {
     font-style: bold;
 }
 
+#continue-shopping-link {
+    text-decoration: none;
+    color: black;
+}
+
 .cart-summary-title-block {
     width: 20%;
     padding: 15px 40px;
@@ -645,4 +650,9 @@ hr {
 
 .card-item-price {
     font-weight: 900;
+}
+
+#cart-summary-line {
+    padding: 1px;
+    background-color: grey;
 }
