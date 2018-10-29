@@ -656,3 +656,18 @@ hr {
     padding: 1px;
     background-color: grey;
 }
+
+.checkout-button, .paypal-button {
+    display: block;
+    border: 1px rgba(0,0,0,0) solid;
+    padding: 15px 20px;
+    margin: 12px auto;
+    background-color: black;
+    font-size: 20px;
+    width: 100%;
+    color: #ffffff;
+}
+
+.checkout-link, .paypal-link {
+    text-decoration: none;
+}
