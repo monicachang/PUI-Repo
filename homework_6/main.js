@@ -25,12 +25,27 @@ class cartItem{
 
 }
 
-var itemCount = 0;
-var cart = new Array();
-// sessionStorage.numInCart = "";
-// localStorage.storedCartItems = "";
+if (sessionStorage.getItem("itemCount")==undefined) {
+    var itemCount = 0;
+}
+else {
+    itemCount = JSON.parse(sessionStorage.getItem("itemCount"));
+}
 
-// var allAttributes = new Array();
+if (sessionStorage.getItem("cartItems")==undefined) {
+    var cart = new Array();
+}
+else {
+    cart = JSON.parse(sessionStorage.getItem("cartItems"));
+}
+
+if (sessionStorage.getItem("numberInCart")==undefined) {
+    sessionStorage.numInCart = 0;
+}
+else {
+    sessionStorage.numInCart = JSON.parse(sessionStorage.getItem("numberInCart"));
+}
+
 var picts = ["fanny1.jpg", "fannyBlue1.jpg", "fannyGreen1.jpg"]
 var sources = ["https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/DogHikingGear1.jpg",
                "https://s3.amazonaws.com/backpackersverse/wp-content/uploads/2016/12/15212859/Interested-In-Hiking-The-Appalachian-Trail-With-A-Dog.jpg",
@@ -83,11 +98,10 @@ $( document ).ready(function() {
     sessionStorage.itemQuantity = 0;
     sessionStorage.itemName = "";
     sessionStorage.itemPrice = 0;
-    // total of all items
-    sessionStorage.numInCart = 0;
+
 
     $("#add-to-cart").click(function() {
-        console.log("hello");
+        // console.log("HELLO" + itemCount + cart);
 
         // get item color
         $(".colors").children("span").each(function() {
@@ -127,12 +141,8 @@ $( document ).ready(function() {
         // itemQuantity
         sessionStorage.itemQuantity = Number($("#quantity-input").val());
 
-        
+        // update total items (takes into account quantity)        
         sessionStorage.numInCart = Number(sessionStorage.numInCart) + Number(sessionStorage.itemQuantity);
-        // console.log(Number(sessionStorage.numInCart));
-        // $(".number-in-cart-dot").text(sessionStorage.numInCart);
-        // reveal number dot 
-        // $(".number-in-cart-block").show();
 
         // delivery
         if ($(".ship-to-me").children([0]).prop("checked")) {
@@ -152,8 +162,7 @@ $( document ).ready(function() {
             sessionStorage.shipToMe, sessionStorage.pickUpInStore, sessionStorage.itemQuantity, sessionStorage.itemName,
             sessionStorage.itemPrice);
 
-        cart.push(newCartItem);
-        
+        cart.push(newCartItem);        
 
         // this stores the number of times you add to cart and NOT the summed quantities
         itemCount = Number(itemCount) + 1;
@@ -164,27 +173,18 @@ $( document ).ready(function() {
         $(".number-in-cart-dot").text(JSON.parse(sessionStorage.getItem("numberInCart")));
 
         sessionStorage.setItem("cartItems", JSON.stringify(cart));
-
     });
 
 });
 
 function displayCart() {
-
     var items = JSON.parse(sessionStorage.getItem("cartItems"));
-    console.log("itemcount" + sessionStorage.getItem("itemCount"));
+    // console.log("itemcount" + sessionStorage.getItem("itemCount"));
     var totalPrice = 0;
 
     // keep the cart number displayed at the top
     var storedNumberInCart = JSON.parse(sessionStorage.getItem("numberInCart"));
     $(".number-in-cart-dot").text(storedNumberInCart);
-    // console.log("hello");
-    // console.log(sessionStorage.getItem("cartItems"));
-    // console.log(items[0].itemSize);
-    // console.log(items[1].itemSize);
-
-    // Object.keys(items).forEach(function (key) {
-    //   console.log(key + "'s favorite fruit is " + favoriteFruit[key]['itemSize']);
 
     // create a card
     var i;
@@ -293,16 +293,12 @@ function showCartNumber() {
 $(document).on("click", ".close", function() {
     $(this).parent().remove();
     var num = $(this).attr("id").slice(-1);
-    console.log(num);
     var cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
-    
     
     // reset the number in cart
     var lastCartNum = JSON.parse(sessionStorage.getItem("numberInCart")); 
     var newCartNum = Number(lastCartNum) - Number(cartItems[num].itemQuantity);  
-    console.log(newCartNum);
     sessionStorage.setItem("numberInCart", JSON.stringify(newCartNum));
-    console.log(JSON.parse(sessionStorage.getItem("numberInCart")));
     $(".number-in-cart-dot").text(newCartNum);
     $(".cart-summary-item-number").text(newCartNum);
 
@@ -315,7 +311,6 @@ $(document).on("click", ".close", function() {
     // remove from stored array
     cartItems.splice(num, 1);
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
-    console.log(JSON.parse(sessionStorage.getItem("cartItems")));
 });
 
 
