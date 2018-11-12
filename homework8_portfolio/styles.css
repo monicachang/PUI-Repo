@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+/*    font-family: 'Open Sans', sans-serif;
+*/    /*font-family: 'Mukta Mahee', sans-serif;*/
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Poppins', sans-serif;*/
+font-family: 'Muli', sans-serif;
+    height: 100%;
+}
+
+/***********************************/
+
+#page {
+    min-height: 100%;
+    background-color: green;
+}
+
+#sidebar-wrapper {
+    background-color: black;
+    color: white;
+    /*margin-bottom: -9999px;
+    padding-bottom: 9999px;*/
+    min-height: 100%;
+    /*get rid of fixed position on smaller screens*/
+    position: fixed;
+}
+
+#content-wrapper {
+    background-color: white;
+    color: black;
+    /*margin-bottom: -9999px;
+    padding-bottom: 9999px;*/
+    min-height: 100%;
+    margin-right: 0;
+    margin-left: auto;
+
+}
+
+.stuff {
+    background-color: red;
+}
+
+
+/*****************************************/
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  list-style: none;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.sidebar-nav li {
+  /*text-indent: 20px;*/
+  line-height: 2.5em;
+/*  background-color: green;*/
+}
+
+#work-nav {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  font-weight: 600;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+  text-align: right;
+
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+/*  background: rgba(255, 255, 255, 0.2);*/
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
