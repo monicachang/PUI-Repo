@@ -5,32 +5,38 @@ $("#toggleFunc").on("click", function() {
 
 //When smooth .toggle() is clicked, the div should toggle slow
 $("#toggleSmooth").on("click", function() {
-	//ADD CODE HERE
+	$(".outer").toggle("slow");
 });
 
 //When .slideUp() is clicked, the div should swipe up to disappear slowly
 $("#slidingUp").on("click", function() {
-	//ADD CODE HERE
+	$(".outer").slideUp("slow");
 });
 
 //When .slideDown() btn is clicked, the div should swipe down to appear slowly
 $("#slidingDown").on("click", function() {
-	//ADD CODE HERE
+	$(".outer").slideDown("slow");
 });
 
 /* You can customize your own animation with .animate() */
 
 //When .animate() slide up to height btn is clicked, the div should swipe up to change height to 20px
 $("#slidingUpHeight").on("click", function() {
-	//ADD CODE HERE
+	$(".outer").animate(
+        {
+            opacity: '0.25',
+            height: '20px'
+        }, 1000);
 });
 
 //When .animate() slide down to height btn is clicked, the div should swipe down to change height to 300px
 $("#slidingDownHeight").on("click", function() {
-    //ADD CODE HERE
+    $(".outer").animate({height: '300px'}, 'slow');
 });
 
 //When the .animate() slide up and down to height btn is clicked, the div should swipe up to change height to 20px and then back down to change height to 50px
 $("#slidingUpDownHeight").on("click", function() {
-    //ADD CODE HERE
+    /* You can chain animations such that they appear sequentially */
+    $(".outer").animate({height: "20px"}, "slow")
+               .animate({height: "50px"}, "slow");
 });
