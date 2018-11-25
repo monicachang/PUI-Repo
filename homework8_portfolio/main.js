@@ -7,17 +7,16 @@
 $(document).ready(function(){
 
     $("#work-nav").click(function(){
-        // $('#sidebar-wrapper').removeClass('col-4').addClass('col-3');
 
         $('#sidebar-wrapper').toggleClass('col-4 col-2');
         $('#content-wrapper').toggleClass('col-8 col-10');
 
-        if ($("#sidebar-brand").children[0].css("text-align") == "right") {
-            $("#sidebar-brand").children[0].css("text-align") = "left";
-        }
-        else {
-            $("#sidebar-brand").children[0].css("text-align") = "right";
-        }
+        // if ($("#sidebar-brand").children[0].css("text-align") == "right") {
+        //     $("#sidebar-brand").children[0].css("text-align") = "left";
+        // }
+        // else {
+        //     $("#sidebar-brand").children[0].css("text-align") = "right";
+        // }
 
 
         // var moveWidth = $("#sidebar-wrapper").width();
