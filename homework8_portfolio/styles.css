@@ -79,12 +79,32 @@ font-family: 'Open Sans', sans-serif;
   color: white;
 }
 
-.nav-link {
-  text-align: right;
-}
-
 #sidebar li a {
   color: white;
+  text-align: right;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#sidebar li a:hover:after {
+  content: "";
+  /*changing the position to absolute here will make the line show up*/
+  position: relative;
+  height: 5%;
+  margin-left: 5px;
+  background: white;
+  min-width: 2px;
+  display: inline-block;
+}
+
+#sidebar li a:hover {
+  text-decoration: none;
+  font-weight: 800;
+  /*border-right: 2px solid;*/
+}
+
+#sidebar li a:active, #sidebar li a:focus {
+  text-decoration: none;
 }
 
 #hamburger-menu {
@@ -96,22 +116,11 @@ font-family: 'Open Sans', sans-serif;
 .navbar-toggler {
   border: none;
   background: transparent !important;
-}
+/*  margin-right: 20px;
+*/}
 
-.navbar-toggler-icon {
-  color: rgba(255, 255, 255, 1);
-}
 
-/*.sidebar-nav li a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-}
 
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
-  text-decoration: none;
-}
-*/
 
 
 
