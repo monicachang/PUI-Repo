@@ -8,8 +8,8 @@ $(document).ready(function(){
 
     $("#work-nav").click(function(){
 
-        $('#sidebar-wrapper').toggleClass('col-4 col-2');
-        $('#content-wrapper').toggleClass('col-8 col-10');
+        $('#sidebar-wrapper').toggleClass('col-md-4 col-md-2');
+        $('#content-wrapper').toggleClass('col-md-8 col-md-10');
 
         // if ($("#sidebar-brand").children[0].css("text-align") == "right") {
         //     $("#sidebar-brand").children[0].css("text-align") = "left";
