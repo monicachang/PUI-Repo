@@ -7,7 +7,8 @@ html, body {
 /*font-family: 'Poppins', sans-serif;*/
     font-family: 'Open Sans', sans-serif;
     font-size: 0.95em;
-    height: 1500px;
+    height: 100%;
+    background-color: black;
 }
 
 /***********************************/
@@ -58,7 +59,10 @@ html, body {
     /*animate nav*/
     flex-shrink: 1;
     transition: all 500ms ease;
+}
 
+#homepage-filler {
+    height: 70%;
 }
 
 
@@ -185,7 +189,8 @@ html, body {
 
 #explore-button:hover {
     opacity: 0.8;
-
+    text-decoration: none;
+}
 
 /*make the sidebar navigation show what is active*/
 .active-category {
