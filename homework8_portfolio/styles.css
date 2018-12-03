@@ -27,7 +27,6 @@ html, body {
     /*get rid of fixed position on smaller screens*/
 /*    position: fixed;*/
     position: relative;
-    
     /*animate nav*/
     flex-grow: 1;
     transition: all 500ms ease;
@@ -201,6 +200,44 @@ html, body {
 .active-subcategory {
     opacity: 0.5;
     text-decoration: underline;
+}
+
+
+
+/*project page styles*/
+.project-heading {
+    margin-top: 22%;
+}
+
+.project-category {
+    font-weight: 300;
+}
+
+.project-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.project-subtitle {
+    font-size: 0.9em;
+}
+
+.photo-block {
+    margin: 8% 5%;
+}
+
+.project-description {
+    font-weight: 300;
+    margin: 10%;
+}
+
+.caption {
+    font-weight: 300;
+    font-size: 0.8em;
+    text-align: right;
+    padding: 5px;
+    font-style: italic;
 }
 
 
