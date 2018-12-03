@@ -5,7 +5,8 @@ html, body {
 */    /*font-family: 'Mukta Mahee', sans-serif;*/
 /*font-family: 'Montserrat', sans-serif;*/
 /*font-family: 'Poppins', sans-serif;*/
-font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
     height: 100%;
 }
 
@@ -68,17 +69,15 @@ font-family: 'Open Sans', sans-serif;
 
 #work-nav {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 340;
     margin-bottom: 10px;
     margin-top: 20px;
 }
 
 #sidebar-brand {
-  /*font-weight: 600;*/
-  /*text-align: left;*/
-  /*margin: 20px 30px;*/
   margin: 8% 12%;
   color: white;
+  font-weight: 300;
 }
 
 #sidebar li a {
@@ -88,27 +87,45 @@ font-family: 'Open Sans', sans-serif;
   padding-left: 5px;
 }
 
-#sidebar #category-nav a:hover:after {
+
+/*#sidebar #category-nav a:hover:after {
   content: "";
-  /*changing the position to absolute here will make the line show up*/
-  position: relative;
-  height: 5%;
+  
+  position: absolute;
+  height: 4%;
   margin-left: 5px;
   background: white;
   min-width: 2px;
   display: inline-block;
+}*/
+
+.category-link {
+    font-weight: 300;
 }
 
-#sidebar #category-nav a:hover {
+.category-link:hover {
   text-decoration: none;
   opacity: 0.5;
   /*font-weight: 800;*/
   /*border-right: 2px solid;*/
 }
 
-#sidebar li a:active, #sidebar li a:focus {
-  text-decoration: none;
+.sidebar-dropdown-item:active {
+    opacity: 0.5;
 }
+
+.sidebar-dropdown-item {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-right: 15px;
+    padding-bottom: 4px;
+}
+
+.sidebar-dropdown {
+    margin-bottom: 8px;
+}
+
 
 #hamburger-menu {
   margin: 20px 20px 20px 30px;
@@ -140,24 +157,33 @@ font-family: 'Open Sans', sans-serif;
     margin: 20px 0px;
 }
 
-/*.home-image {
-    width: 100%;
-    height: auto;
-}*/
 
-#start-your-journey {
+#explore-button {
     border: 1px solid #63775b;
     border-radius: 3px;
     padding: 5px 10px;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     background-color: #63775b;
     float: right;
     margin: 20px 0px;
     /*font-family: 'Open Sans', sans-serif;*/
 }
 
-#start-your-journey:hover {
+#explore-button:hover {
     opacity: 0.8;
 }
+
+
+/*make the sidebar navigation show what is active*/
+.active-category {
+    /*font-weight: 600;*/
+    opacity: 0.5;
+}
+
+.active-subcategory {
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
 
