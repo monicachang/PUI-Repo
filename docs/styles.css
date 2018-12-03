@@ -1,0 +1,257 @@
+html, body {
+    margin: 0;
+    padding: 0;
+/*    font-family: 'Open Sans', sans-serif;
+*/    /*font-family: 'Mukta Mahee', sans-serif;*/
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+    height: 100%;
+    background-color: black;
+}
+
+/***********************************/
+
+#page {
+    min-height: 100%;
+    /*background-color: #D0890D;*/
+    background-color: black;
+}
+
+#sidebar-wrapper {
+    background-color: #63775b;
+    color: white;
+
+    min-height: 100%;
+    /*get rid of fixed position on smaller screens*/
+/*    position: fixed;*/
+    position: relative;
+    /*animate nav*/
+    flex-grow: 1;
+    transition: all 500ms ease;
+}
+
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        background-color: #63775b;
+        color: white;
+
+        min-height: 100%;
+        /*get rid of fixed position on smaller screens*/
+        position: fixed;
+    }
+
+}
+
+
+#content-wrapper {
+    background-color: black;
+    color: white;
+
+    min-height: 100%;
+    margin-right: 0px;
+    margin-left: auto;
+    padding: 0% 8% 0% 8%;
+
+    /*animate nav*/
+    flex-shrink: 1;
+    transition: all 500ms ease;
+}
+
+#homepage-filler {
+    height: 70%;
+}
+
+
+/*****************************************/
+
+
+/* Sidebar Styles */
+
+#work-nav {
+    font-size: 2em;
+    font-weight: 340;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#sidebar-brand {
+  margin: 8% 12%;
+  color: white;
+  font-weight: 300;
+}
+
+#sidebar li a {
+  color: white;
+  text-align: right;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
+/*#sidebar #category-nav a:hover:after {
+  content: "";
+  
+  position: absolute;
+  height: 4%;
+  margin-left: 5px;
+  background: white;
+  min-width: 2px;
+  display: inline-block;
+}*/
+
+.category-link {
+    font-weight: 300;
+}
+
+.category-link:hover {
+  text-decoration: none;
+  opacity: 0.5;
+  /*font-weight: 800;*/
+  /*border-right: 2px solid;*/
+}
+
+.sidebar-dropdown-item:active {
+    opacity: 0.5;
+}
+
+.sidebar-dropdown-item {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-right: 15px;
+    padding-bottom: 4px;
+}
+
+.sidebar-dropdown {
+    margin-bottom: 8px;
+}
+
+
+#hamburger-menu {
+  margin: 20px 20px 20px 30px;
+  padding: 0px;
+
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+/*  margin-right: 20px;
+*/}
+
+
+
+
+/*content stuff*/
+#welcome-statement1 {
+    display: block;
+    text-align: left;
+    margin: 29% 5% 8% 5%;
+    color: rgba(255,255,255, 0.8);
+    font-size: 1em;
+    font-weight: 300;
+}
+
+#welcome-statement2 {
+    /*display: block;*/
+    text-align: right;
+    margin: 29% 5% 15% 5%;
+    color: rgba(255,255,255, 0.8);
+    visibility: hidden;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/*for fixing carousel size*/
+#myCarousel{
+    /*max-width: 80%;
+    overflow: hidden;*/
+    margin: 20px 0px;
+}
+
+
+#explore-button {
+    border: 1px solid #63775b;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 400;
+    background-color: #63775b;
+    float: right;
+    margin: 0% 5%;
+    visibility: hidden;
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+
+#explore-button:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/*make the sidebar navigation show what is active*/
+.active-category {
+    /*font-weight: 600;*/
+    opacity: 0.5;
+}
+
+.active-subcategory {
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
+
+
+/*project page styles*/
+.project-heading {
+    margin-top: 22%;
+}
+
+.project-category {
+    font-weight: 300;
+}
+
+.project-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.project-subtitle {
+    font-size: 0.9em;
+}
+
+.photo-block {
+    margin: 8% 5%;
+}
+
+.project-description {
+    font-weight: 300;
+    margin: 10%;
+}
+
+.caption {
+    font-weight: 300;
+    font-size: 0.8em;
+    text-align: right;
+    padding: 5px;
+    font-style: italic;
+}
+
+
+/*for the contact page*/
+.contact-block {
+    margin-top: 22%;
+}
+
+.contact-block img {
+    margin-top: 20px;
+}
+
+#name, #email {
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 0.7em 0em;
+}
