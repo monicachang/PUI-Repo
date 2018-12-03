@@ -40,13 +40,13 @@ $(document).ready(function(){
 
     // shrink navigation
     $("#work-nav").click(function(){
-
         $('#sidebar-wrapper').toggleClass('col-md-4 col-md-3');
         $('#content-wrapper').toggleClass('col-md-8 col-md-9');
+    });
 
-        // $('#objective-statement').removeClass("fadeInRight");        
-        // $('#objective-statement').toggleClass("fadeOut");
-
+    $(".sidebar-dropdown-item").click(function(){
+        $('#sidebar-wrapper').toggleClass('col-md-4 col-md-3');
+        $('#content-wrapper').toggleClass('col-md-8 col-md-9');
     });
 
     // sidebar dropdown on click

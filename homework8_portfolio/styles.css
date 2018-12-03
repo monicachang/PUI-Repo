@@ -241,3 +241,17 @@ html, body {
 }
 
 
+/*for the contact page*/
+.contact-block {
+    margin-top: 22%;
+}
+
+.contact-block img {
+    margin-top: 20px;
+}
+
+#name, #email {
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 0.7em 0em;
+}
