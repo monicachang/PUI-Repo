@@ -1,9 +1,3 @@
-// Menu Toggle Script
-
-// $("#menu-toggle").click(function(e) {
-//     e.preventDefault();
-//     $("#wrapper").toggleClass("toggled");
-// });
 $(document).ready(function(){
 
     // animate home page on scroll
@@ -24,18 +18,12 @@ $(document).ready(function(){
             $('#explore-button').attr("class", "animated fadeIn slow");
         } else {
             $('#welcome-statement2').attr("class", "animated fadeOut slow");
-            // $('#welcome-statement2').css("visibility", "hidden"); 
         }
     });
 
     // if the category was expanded or active, slide it down
     $(".active-category").next().slideDown();
     $(".open-dropdown").slideDown();
-
-    // change color of sidebar if entering a project
-    // $(".sidebar-dropdown-item").click(function(){
-    //     $("#sidebar-wrapper").css("background-color", "black");
-    // });
             
 
     // shrink navigation
