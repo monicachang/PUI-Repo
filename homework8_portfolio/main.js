@@ -1,9 +1,3 @@
-// Menu Toggle Script
-
-// $("#menu-toggle").click(function(e) {
-//     e.preventDefault();
-//     $("#wrapper").toggleClass("toggled");
-// });
 $(document).ready(function(){
 
     // animate home page on scroll
@@ -24,7 +18,6 @@ $(document).ready(function(){
             $('#explore-button').attr("class", "animated fadeIn slow");
         } else {
             $('#welcome-statement2').attr("class", "animated fadeOut slow");
-            // $('#welcome-statement2').css("visibility", "hidden"); 
         }
     });
 
