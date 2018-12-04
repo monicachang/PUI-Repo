@@ -24,11 +24,6 @@ $(document).ready(function(){
     // if the category was expanded or active, slide it down
     $(".active-category").next().slideDown();
     $(".open-dropdown").slideDown();
-
-    // change color of sidebar if entering a project
-    // $(".sidebar-dropdown-item").click(function(){
-    //     $("#sidebar-wrapper").css("background-color", "black");
-    // });
             
 
     // shrink navigation
